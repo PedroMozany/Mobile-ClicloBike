@@ -3,7 +3,7 @@ function initMap() {
     window.myMap = new google.maps.Map(document.getElementById("map"), {
         mapTypeControl: false,
         center: { lat: -19.8573741, lng: -43.9108319 },
-        zoom: 15.0,
+        zoom: 15.3,
     });
     new AutocompleteDirectionsHandler(myMap);
     async function getLocation() {

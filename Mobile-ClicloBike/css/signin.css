@@ -68,3 +68,15 @@ img {
   height: 104px;
   margin: 30px 100px;
 }
+
+
+@keyframes fade-out {
+	0%, 85% {
+    height:100%;
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+    /* height:0; */
+	}
+}
