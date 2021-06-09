@@ -27,18 +27,12 @@
         senha.onchange = validaForm;
       };
     </script>
-  
+
     <!-- Custom styles for this template -->
     <link href="css/signin.css" rel="stylesheet" />
   </head>
 
   <body class="text-center">
-
-  <div class="container">
-    <img src="imagem/ciclo-bike-logo-branca.png">
-  </div>
-
-
     <header>
       <img
         class="mb-4"
@@ -52,7 +46,7 @@
     <main class="form-signin conteudo">
       <h1>CONECTE-SE</h1>
 
-      <form action="https://postman-echo.com/post" method="POST">
+      <form >
         <div class="input-group">
           <label class="visually-hidden" for="autoSizingInputGroup"
             >Usuario</label
@@ -62,6 +56,7 @@
             type="text"
             class="form-control"
             id="nome"
+            required="required"
             placeholder="Nome de usuário"
           />
         </div>
@@ -72,22 +67,34 @@
             type="password"
             class="form-control"
             id="senha"
+            required="required"
             placeholder="Senha de usuários"
           />
         </div>
-        <button id="login_submit" type="submit"><a href="index.html">Login</a></button>
-        <a href="#">Esqueci a senha</a>
-        <button><a href="registro.html">Registre-se</a></button>
-        <button>Registre com google</button>
-        <button>Registre-se com facebook</button>
+        <button id="login_submit" type="submit">
+          <a href="index.html">Login</a>
+        </button>
+        <button id="login_submit" type="submit">
+          <a href="/Mobile-ClicloBike/registro.html">Cadastre-se</a>
+        </button>
+        <button class="social-button" id="facebook-connect">
+          <a href="#">
+            <span>Connect with Facebook</span></a
+          >
+        </button>
+        <button class="social-button" id="google-connect" > 
+          <a href="#">
+            <span>Connect with Google</span></a
+          >
+        </button>
       </form>
     </main>
 
-     <!-- JavaScript Bundle with Popper -->
-  <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-  crossorigin="anonymous"
-></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

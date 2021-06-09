@@ -51,7 +51,7 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link" aria-current="page" href="/landing page/index.html">Home</a>
           </li>
 		  <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="quem_somos.html">Quem Somos</a>
@@ -60,7 +60,7 @@
             <a class="nav-link active" aria-current="page" href="trabalhe_conosco.html">Trabalhe Conosco</a>
           </li>
 		  <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/Mobile-ClicloBike/registro.html" target="_blank">Registrar</a>
+            <a class="nav-link active" aria-current="page" href="/Mobile-ClicloBike/registro.html">Registrar</a>
           </li>
 		  <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="informacoes.html">Informações</a>
@@ -74,9 +74,7 @@
   </nav>
 </header>
 
-<main>
-
-  <main>
+<main id="conteudo">
       <h1><br>Tenha possibilidades de escolhas!</h1>
       <div class="index">
         <div class="col-md-4">
@@ -106,14 +104,26 @@
           </div>
         </div>
       </div>
-    </main>
-  <footer class="container">
+</main>
+
+<footer class="container">
     <p>CICLO BIKE. All rights reserved. Termos de uso. | Privacidade e política
         de cookies.</p>
   </footer>
-</main>
 
+  
+<Script>
+  document.querySelectorAll('a').forEach(link => {
+     const conteudo = document.getElementById("conteudo")
 
+ link.onclick = function(e){
+   e.preventDefault()
+   fetch(link.href)
+   .then(resp => resp.text())
+   .then(html => conteudo.innerHTML = html)
+ }
+  })
+</Script>
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
       
