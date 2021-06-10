@@ -1,4 +1,15 @@
 var infowindow;
+/**
+ * Variáveis globais
+ */
+var originPlaceId;
+var inputOri = document.querySelector("#origin-input");
+window.newMarker;
+
+/**
+ *
+ * Função que é chamada quando o mapa é iniciado
+ */
 function initMap() {
     window.myMap = new google.maps.Map(document.getElementById("map"), {
         mapTypeControl: false,
@@ -18,6 +29,21 @@ function initMap() {
         myMap.setCenter({
             lat: position.latitude,
             lng: position.longitude,
+        });
+
+        service = new google.maps.places.PlacesService(myMap);
+        var request = {
+            location: {
+                lat: position.latitude,
+                lng: position.longitude,
+            },
+            radius: 100,
+            type: ["establishment"],
+        };
+        service.nearbySearch(request, (result) => {
+            console.log(result[1]);
+            inputOri.value = result[1].vicinity;
+            originPlaceId = result[1].place_id;
         });
     }
 }
@@ -57,20 +83,6 @@ function AutocompleteDirectionsHandler(map) {
     // this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
 }
 
-// Sets a listener on a radio button to change the filter type on Places
-// Autocomplete.
-AutocompleteDirectionsHandler.prototype.setupClickListener = function (
-    id,
-    mode
-) {
-    var radioButton = document.getElementById(id);
-    var me = this;
-    radioButton.addEventListener("click", function () {
-        me.travelMode = mode;
-        me.route();
-    });
-};
-
 AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function (
     autocomplete,
     mode
@@ -85,6 +97,7 @@ AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function (
         }
         if (mode === "ORIG") {
             me.originPlaceId = place.place_id;
+            originPlaceId = place.place_id;
         } else {
             me.destinationPlaceId = place.place_id;
         }
@@ -93,31 +106,23 @@ AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function (
 };
 
 AutocompleteDirectionsHandler.prototype.route = function () {
-    if (!this.originPlaceId || !this.destinationPlaceId) {
+    if (!originPlaceId || !this.destinationPlaceId) {
         return;
     }
     var me = this;
 
     // alert(this.originPlaceId);
+    console.log(this.originPlaceId);
 
     this.directionsService.route(
         {
-            origin: { placeId: this.originPlaceId },
+            origin: { placeId: originPlaceId },
             destination: { placeId: this.destinationPlaceId },
-            travelMode: this.travelMode,
+            travelMode: "BICYCLING",
         },
         function (response, status) {
             if (status === "OK") {
                 me.directionsDisplay.setDirections(response);
-
-                document.getElementById("startlat").innerHTML =
-                    response.routes[0].legs[0].start_location.lat();
-                document.getElementById("startlng").innerHTML =
-                    response.routes[0].legs[0].start_location.lng();
-                document.getElementById("endlat").innerHTML =
-                    response.routes[0].legs[0].end_location.lat();
-                document.getElementById("endlng").innerHTML =
-                    response.routes[0].legs[0].end_location.lng();
 
                 console.log(response.routes[0].legs[0].start_location.lat());
                 console.log(response.routes[0].legs[0].start_location.lng());
