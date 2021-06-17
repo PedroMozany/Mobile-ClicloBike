@@ -52,6 +52,13 @@
                     </div>
                 </div>
             </div>
+
+            <script>
+                window.onload = function() {
+                    document.getElementById('name').innerText = "Hello, " + sessionStorage.getItem('name');
+                };
+            </script>
+            
             <div class="mapa">
                 <div id="map"></div>
             </div>
