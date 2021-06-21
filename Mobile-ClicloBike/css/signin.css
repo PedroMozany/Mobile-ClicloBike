@@ -20,7 +20,7 @@ body {
     margin: 20px auto;
     border-radius: 15px;
 }
-h1 {
+h2 {
     font-size: 30px;
     margin: auto;
 }
@@ -40,14 +40,14 @@ button {
     border-radius: 5px;
     margin-top: 10px;
     color: white;
-    font-size: 12px;
+    font-size: 1remx;
 }
 
 button > a {
     text-emphasis: none;
     text-decoration: none;
     color: white;
-    font-size: 12px;
+    font-size: 1rem;
 }
 .input-group {
     width: 240px;

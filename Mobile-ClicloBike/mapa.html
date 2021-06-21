@@ -25,7 +25,7 @@
     <body class="text-center">
         <main class="form-signin">
             <div class="container">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="row searchboxs">
@@ -54,11 +54,12 @@
             </div>
 
             <script>
-                window.onload = function() {
-                    document.getElementById('name').innerText = "Hello, " + sessionStorage.getItem('name');
+                window.onload = function () {
+                    document.getElementById("name").innerText =
+                        "Hello, " + sessionStorage.getItem("name");
                 };
             </script>
-            
+
             <div class="mapa">
                 <div id="map"></div>
             </div>
