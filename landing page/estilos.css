@@ -1,3 +1,25 @@
+/*
+    Estilo landing page CicloBike
+*/
+
+:root {
+    --purple: #3c9455;
+}
+
+nav.navbar {
+    background: var(--#3c9455);
+}
+nav.navbar figure img {
+    /* width: 1px;
+    max-height: fit-content;
+    object-fit: cover; */
+    width: 10px;
+    height: 10px;
+    object-fit: cover;
+    flex: 0 0 80px;
+    margin-right: 20px;
+}
+
 .row {
     --bs-gutter-x: 0 !important;
 }
@@ -123,7 +145,6 @@
     align-items: center; */
 }
 
-
 h2 {
     text-align: left;
 }
@@ -154,7 +175,6 @@ button.btn {
     margin-right: 25%;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    
 }
 
 .btn-primary {
@@ -162,9 +182,39 @@ button.btn {
     background-color: #3c9455;
     border-color: #3c9455;
 }
-.logomarca.img{
-    margin: 0;
-    padding: 0%;
-    align-content: center;
-    
+.logomarca.img {
+    max-width: 1rem;
+    align-items: flex-end;
+}
+
+/*
+    Estilo do Header/menu
+*/
+
+nav.navbar {
+    background: var(--#3c9455);
+}
+nav.navbarfigure img {
+    object-fit: cover;
+}
+
+/*
+    Estilo do rodapé
+*/
+
+
+footer {
+    background: #3c9455;
+}
+footer figure {
+    max-width: 5px;
+    width: 1%;
+    object-fit: cover;
+    aspect-ratio: 1:6,3;
+}
+
+body > footer > div > div > figure > img{
+    width: 1px;
+    max-height: fit-content;
+    object-fit: cover;
 }

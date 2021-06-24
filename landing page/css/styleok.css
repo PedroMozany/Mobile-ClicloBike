@@ -1,0 +1,105 @@
+/*
+    Estilo landing page CicloBike
+*/
+
+:root {
+    var(--#3c9455);
+}
+
+nav.navbar {
+    background: var(--#3c9455);
+}
+
+body {
+    font-size: 14px;
+}
+
+/*
+    Estilo do Header/menu
+*/
+
+nav.navbar {
+    background: var(--#3c9455);
+}
+nav.navbar img {
+    max-width: 200px;
+}
+
+/* 
+Estilo Avaliacoes 
+*/
+
+#avaliacoes figure {
+    flex: 0 0 80px;
+    margin-right: 20px;
+}
+#avaliacoes figure img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+/* 
+Estilo Entrevistas 
+*/
+
+#entrevistas {
+    background: #ffe7ff;
+}
+
+.entrevista-container p {
+    margin-bottom: 1px;
+}
+
+/* 
+Estilo extras 
+*/
+
+#novidades figure img {
+    object-fit: cover;
+}
+
+.social-icons {
+    font-size: 2rem;
+}
+
+.social-icons a {
+    margin-right: 1rem;
+}
+.social-icons a:last-child {
+    margin-right: 0;
+}
+#editorial {
+    margin-top: 3rem;
+}
+
+/* 
+Estilo rodapé
+*/
+
+footer {
+    background: #f0f0f0;
+}
+footer figure {
+    max-width: 100px;
+}
+footer figure img {
+    width: 100%;
+    object-fit: contain;
+}
+
+/*
+Botoes
+*/
+.btn-primary {
+    background-color: var(--purple);
+    border-color: var(--purple);
+}
+.bg-primary {
+    background-color: var(--purple) !important;
+}
+
+a {
+    color: var(--purple);
+}
