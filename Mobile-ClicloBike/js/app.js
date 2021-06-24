@@ -1,21 +1,19 @@
+// armazenando dados
+localStorage.setItem('username', nome.value);
+localStorage.setItem('password',senha.value);
 
-// armazenamento é o do evento de formulário do login.
 window.onload = () => {
-    // carrega o ultimo identificador de usuário usado
-    nome.value = localStorage.getItem('username');
-
     // loga o usuário e registra o seu identificador
     login.onsubmit = (evento) => {
-        localStorage.setItem('username', nome.value);
+       nome.value = localStorage.getItem('username');
         alert(`Usuário ${nome.value} logado.`);
         evento.preventDefault();
     };
-
 }
 
 // validação de senha 
-let password = document.getElementById("password");
-let confirm_password = document.getElementById("confirm_password");
+let password = document.getElementById("senha");
+let confirm_password = document.getElementById("confirmasenha");
 
 function validatePassword() {
     if (password.value != confirm_password.value) {
@@ -26,3 +24,11 @@ function validatePassword() {
 }
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
+
+
+//função de alerta de conclusão de cadastro
+
+function conclusão() {
+    alert("Cadastro concluido!!")
+}
+

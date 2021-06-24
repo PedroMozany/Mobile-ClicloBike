@@ -31,7 +31,6 @@
         margin-top: 10px;
       }
     </style>
-
   </head>
 
   <body class="text-center">
@@ -46,7 +45,9 @@
     </header>
 
     <main class="form-signin">
-      <form class="cadastro">
+      
+      <form class="cadastro" action="index.html">
+
         <h1>Cadastre-se</h1>
 
         <div id="nome">
@@ -58,6 +59,7 @@
             id="name"
           />
         </div>
+
         <div id="Senha">
           <h6 class="form-label">Senha</h6>
           <input
@@ -76,6 +78,7 @@
             id="confirmasenha"
           />
         </div>
+
         <div id="Data de nascimento">
           <h6 class="form-label">Data de nascimento</h6>
           <input
@@ -103,20 +106,25 @@
             id="email"
           />
         </div>
-        <input type="button" id="salvar" value="Cadastrar" style="padding: 5px; margin-top: 10px; background-color: #3c9455; border-radius: 8%; color: white; font-size: 18px; width: 240px;">
-        <button><a href="index.html">Logar</a></button>
-        <script src="script.js"></script>
+
+        <button onclick="conclusão()">Cadastrar</button>
       </form>
+
+      <div class="voltaLogar">
+        
+        <a href="index.html"><button>Logar</button></a>
+      </div>
+      
     </main>
-    
+
+    <!-- JavaScript Bundle with Popper -->
+
+    <script src="js/app.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
   </body>
-
-  <!-- JavaScript Bundle with Popper -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-    crossorigin="anonymous"
-  ></script>
-
-  
 </html>
