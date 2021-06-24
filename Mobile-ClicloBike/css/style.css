@@ -3,15 +3,27 @@
 
 body {
     /* overflow: hidden; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main > .container {
+}
+
+.form-mapa {
+    box-shadow: 0px 2px 30px lightgrey;
+    z-index: 1;
+    position: relative;
+    height: 100px;
+
 }
 
 #map {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     /* height: 300px;  */
 
     width: 100%;
-    height: 100%; 
-    
+    height: 100%;
+    background: orange;
 }
 /* Optional: Makes the sample page fill the window. */
 
@@ -50,13 +62,98 @@ body {
     font-weight: 300;
 }
 
-
 .mapa {
     width: 100%;
-    height: 100%;
-    position: absolute;
+    height: calc(100vh - 66px);
+}
+
+body.form-open .mapa {
+    height: calc(100vh - 100px);
+
 }
 
 body {
     overflow: hidden;
+}
+
+.rounded {
+    border-radius: 50px !important;
+}
+.btn.btn-block {
+    width: 100%;
+}
+
+
+/*
+    Lista de Favoritos
+*/
+
+
+
+ul#listaLocais li {
+    cursor: pointer;
+    /* justify-content: space-between; */
+}
+ul#listaLocais li.list-group-item  {
+    padding: 10px;
+}
+ul#listaLocais li:hover {
+    background: #f1f1f1;
+}
+
+ul#listaLocais li button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    align-items: center;
+}
+ul#listaLocais li .btn-rota {
+    width: calc(100% - 60px);
+}
+ul#listaLocais li .btn-deleta {
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    
+}
+
+.btn.detalhes-rota,
+.btn.favoritos {
+    position: fixed;
+    left: 20px;
+    border-radius: 30px;
+    width: 60px;
+    height: 60px;
+    box-shadow: 2px 5px 12px #555;
+}
+.btn.detalhes-rota i,
+.btn.favoritos i {
+    color: #fff;
+    font-size: 26px;
+}
+.btn.detalhes-rota:disabled,
+.btn.favoritos:disabled {
+    background: grey;
+    opacity: .4;
+}
+
+
+.btn.favoritos {
+    bottom: 10%;
+    background: green;
+}
+
+
+.btn.detalhes-rota {
+    bottom: calc(10% + 80px);
+    background: rebeccapurple;
+}
+
+#favoritar:disabled {
+    opacity: .5;
+}
+
+#favoritar:disabled i{
+    color: grey !important;
+
 }
