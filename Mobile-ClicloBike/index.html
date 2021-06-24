@@ -44,12 +44,12 @@
         </header>
 
         <main class="form-signin conteudo">
-            <h2>CONECTE-SE</h2>
+            <h1>CONECTE-SE</h1>
 
-            <form>
+            <form id="login">
                 <div class="input-group">
                     <label class="visually-hidden" for="autoSizingInputGroup"
-                        >Usuario</label
+                        >Email</label
                     >
                     <div class="input-group-text">
                         <i class="bi bi-person-fill"></i>
@@ -59,7 +59,7 @@
                         class="form-control"
                         id="nomelog"
                         required="required"
-                        placeholder="Nome de usuário"
+                        placeholder="Email"
                     />
                 </div>
                 <div class="input-group">
@@ -78,13 +78,12 @@
                     />
                 </div>
 
-                <button id="login_submit" type="submit">
-                    <a href="mapa.html">Entrar</a>
+                <button class="btn btn-success d-block my-3 w-100" id="login_submit" type="submit">
+                   Entrar
                 </button>
 
-                <button id="registro_submit" type="submit">
-                    <a href="registro.html">Novo aqui? Cadastre-se</a>
-                </button>
+                <a class="btn btn-outline-success d-block w-100" href="registro.html">Cadastre-se</a>
+                
                 <!-- <button class="social-button" id="facebook-connect">
                     <a href="#"> <span>Connect with Facebook</span></a>
                 </button>
@@ -133,16 +132,14 @@
         </main>
 
         <!-- JavaScript Bundle with Popper -->
-
-        <div class="splash">
-            <img src="imagem/ciclo-bike-logo-branca.png" alt="logo" />
-        </div>
-
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
             crossorigin="anonymous"
         ></script>
-        <script src="valida.js"></script>
+        <div class="splash">
+            <img src="imagem/ciclo-bike-logo-branca.png" alt="logo" />
+        </div>
+        <script src="/js/autentica.js"></script>
     </body>
 </html>

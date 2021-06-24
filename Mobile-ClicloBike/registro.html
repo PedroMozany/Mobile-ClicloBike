@@ -17,24 +17,24 @@
             crossorigin="anonymous"
         />
         <script>
-            window.onload = () => {
-                salvar.disabled = true;
-                let validaForm = () => {
-                    if (
-                        nameRegistro.value.length == 0 ||
-                        senha.value.length == 0 ||
-                        confirmasenha.value.length == 0 ||
-                        data.value.length == 0 ||
-                        email.value.length == 0
-                    )
-                        salvar.disabled = false;
-                };
-                name.onchange = validaForm;
-                senha.onchange = validaForm;
-                confirmasenha.onchange = validaForm;
-                data.onchange = validaForm;
-                email.onchange = validaForm;
-            };
+            // window.onload = () => {
+            //     salvar.disabled = true;
+            //     let validaForm = () => {
+            //         if (
+            //             nameRegistro.value.length == 0 ||
+            //             senha.value.length == 0 ||
+            //             confirmasenha.value.length == 0 ||
+            //             data.value.length == 0 ||
+            //             email.value.length == 0
+            //         )
+            //             salvar.disabled = false;
+            //     };
+            //     name.onchange = validaForm;
+            //     senha.onchange = validaForm;
+            //     confirmasenha.onchange = validaForm;
+            //     data.onchange = validaForm;
+            //     email.onchange = validaForm;
+            // };
         </script>
 
         <!-- Custom styles for this template -->
@@ -106,12 +106,12 @@
                     />
                 </div>
                 <div id="Telefone">
-                    <h6 class="form-label">Telefone</h6>
+                    <h6 class="form-label">Seu Peso (em Kg)</h6>
                     <input
                         type="tel"
                         class="form-control"
                         required="required"
-                        id="telefone"
+                        id="peso"
                         maxlength="11"
                     />
                 </div>
@@ -127,19 +127,10 @@
                 <input
                     type="button"
                     id="salvar"
+                    class="btn btn-success d-block my-3 w-100"
                     value="Cadastrar"
-                    style="
-                        padding: 5px;
-                        margin-top: 10px;
-                        background-color: #3c9455;
-                        border-radius: 8%;
-                        color: white;
-                        font-size: 18px;
-                        width: 240px;
-                    "
-                    onclick="alertLogin()"
                 />
-                <button><a href="index.html">Logar</a></button>
+                <a class="btn btn-success d-block my-3 w-100" href="index.html">Logar</a>
                 <script src="script.js"></script>
             </form>
         </main>
