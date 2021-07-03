@@ -38,7 +38,7 @@ button {
     top: 397px;
     background-color: #3c9455;
     border-radius: 5px;
-  margin-top: 10px;
+    margin-top: 10px;
     color: white;
     font-size: 12px;
 }
@@ -57,18 +57,15 @@ button > a {
 span {
     height: 36px;
 }
-
+a {
+    margin-bottom: 30px;
+}
 img {
     width: 104px;
     height: 104px;
     margin: 30px 100px;
 }
- .cadastro-se{
-    padding-left: 20px;
- }
- .voltaLogar{
-    padding-left: 20px;
- }
+
 @keyframes fade-out {
     0%,
     85% {
@@ -81,16 +78,124 @@ img {
     }
 }
 
+/*** social button ***/
 
+.social-button {
+    background-position: 25px 0px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 36px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 240px;
+    margin-top: 10px;
+    border-radius: 5px;
+    outline: rgb(255, 255, 255) none 0px;
+    transition: all 0.2s cubic-bezier(0.72, 0.01, 0.56, 1) 0s;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    line-height: 31px;
+}
+#facebook-connect {
+    background: #3c9455
+        url("https://raw.githubusercontent.com/eswarasai/social-login/master/img/facebook.svg?sanitize=true")
+        no-repeat scroll 5px -6px / 30px 50px padding-box border-box;
+    border: 1px solid rgb(60, 90, 154);
+}
+#facebook-connect:hover {
+    border-color: rgb(60, 90, 154);
+    background: rgb(60, 90, 154)
+        url("https://raw.githubusercontent.com/eswarasai/social-login/master/img/facebook-white.svg?sanitize=true")
+        no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease-out;
+}
 
+#facebook-connect span {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    outline: rgb(255, 255, 255) none 0px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
 
+#facebook-connect:hover span {
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#google-connect {
+    background: #3c9455
+        url("https://raw.githubusercontent.com/eswarasai/social-login/master/img/google-plus.png")
+        no-repeat scroll 0px -7px / 50px 50px padding-box border-box;
+    border: 1px solid rgb(220, 74, 61);
+}
 
+#google-connect:hover {
+    border-color: rgb(220, 74, 61);
+    background: rgb(220, 74, 61)
+        url("https://raw.githubusercontent.com/eswarasai/social-login/master/img/google-plus-white.png")
+        no-repeat scroll 5px 0px / 50px 50px padding-box border-box;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease-out;
+}
 
+#google-connect span {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    border: 0px none rgb(220, 74, 61);
+    outline: rgb(255, 255, 255) none 0px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
 
+#google-connect:hover span {
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
 
+.btn-google {
+    color: white;
+    background-color: #ea4335;
+}
 
-
-/***** tela de Splash ****/
+.btn-facebook {
+    color: white;
+    background-color: #3b5998;
+}
 
 .splash {
     position: fixed;
