@@ -1,4 +1,4 @@
-Esse trabalho foi desenvolvido em grupo para demonstrar habilidades adquiridas em HTML,CSS,JavaScript para disciplina Trabalho Interdisciplinar: Aplicações WEb PUC-Minas.
+Projeto academico realizado em grupo para simular um aplicativo web de rotas para ciclistas demonstrando habilidades em HTML, CSS, JavaScript é consumo de API.
 
 Grupo: 
 https://github.com/Jvascalves,
@@ -8,4 +8,4 @@ https://github.com/victorazeved,
 https://github.com/JúliaViera é 
 Tainara.
 
-Pode ser visto pelo link: https://quirky-shannon-aecb85.netlify.app/index.html.
+link: https://quirky-shannon-aecb85.netlify.app/index.html.
